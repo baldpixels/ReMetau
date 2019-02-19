@@ -9,21 +9,14 @@ body {
   font-family: Helvetica;
 }
 
-nav {
-  z-index: +1;
+#border {
+  z-index: +3;
+  width: 100vw;
+  height: 100vh;
   position: fixed;
   top: 0;
   left: 0;
-  width: 100vw;
-  background-color: #0000ff;
-}
-
-#nav-text {
-  color: #fefefe;
-}
-
-.navItem {
-
+  box-sizing: border-box;
 }
 
 section {
@@ -40,7 +33,6 @@ section {
 }
 
 img {
-  z-index: -2;
   object-fit: cover;
 }
 
@@ -59,7 +51,8 @@ img {
 }
 
 .text {
-
+  box-sizing: border-box;
+  background-color: #fefefe;
 }
 
 h1 {
@@ -100,8 +93,8 @@ a:hover {
 
   }
 
-  nav {
-    height: 60px;
+  #border {
+    border: 6px solid #0000ff;
   }
 
   img {
@@ -125,6 +118,8 @@ a:hover {
     position: relative;
     top: 15px;
     left: 9vw;
+    width: 91vw;
+    height: auto;
   }
 
   h1 {
@@ -152,18 +147,17 @@ a:hover {
 
   }
 
-  nav {
-    height: 90px;
+  #border {
+    border: 0px solid #0000ff;
   }
 
   img {
+    z-index: -1;
+    position: absolute;
+    top: 0;
+    left: 0;
     width: 100vw;
     height: 100vh;
-    position: absolute;
-    top: 0px;
-    left: 0px;
-    object-fit: cover;
-    object-position: left;
   }
 
   .map {
@@ -172,14 +166,13 @@ a:hover {
     margin-top: 20vh;
   }
 
-  .block {
-    border-left: 30px solid #0000ff;
-  }
-
   .text {
-    position: absolute;
-    top: 120px;
+    position: relative;
+    padding: 0 30px 3px 30px;
     left: 33vw;
+    width: 67vw;
+    height: auto;
+    border-left: 18px solid #0000ff;
   }
 
   h1 {
