@@ -10,7 +10,7 @@ body {
 }
 
 #border {
-  z-index: +3;
+  z-index: +1;
   width: 100vw;
   height: 100vh;
   position: fixed;
@@ -28,7 +28,7 @@ section {
 }
 
 .black {
-  z-index: +1;
+  z-index: +2;
   background-color: #000;
 }
 
@@ -38,16 +38,6 @@ img {
 
 .map {
 
-}
-
-.block {
-  z-index: -1;
-  position: absolute;
-  top: 0;
-  right: 0;
-  width: 72vw;
-  height: 100vh;
-  background-color: #fefefe;
 }
 
 .text {
