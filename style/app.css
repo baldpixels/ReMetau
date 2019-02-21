@@ -27,7 +27,7 @@ section {
   margin: 0;
 }
 
-.black {
+.dark {
   z-index: +2;
   background-color: #000;
 }
@@ -40,9 +40,11 @@ img {
 
 }
 
-.text {
+.text15, .text30, .text45, .text60 {
+  position: relative;
   box-sizing: border-box;
   background-color: #fefefe;
+  height: auto;
 }
 
 h1 {
@@ -76,7 +78,15 @@ a:hover {
 }
 
 /*
-* small DEVICES
+* S
+* S
+* S
+* S
+* Small DEVICES
+* S
+* S
+* S
+* S
 */
 @media (max-width: 768px) {
   section {
@@ -87,13 +97,30 @@ a:hover {
     border: 6px solid #0000ff;
   }
 
-  img {
+  .imageLeft, .imageRight {
     width: 82vw;
-    height: auto;
+    height: 82vw;
     margin-left: 9vw;
     margin-right: 9vw;
     margin-top: 30px;
-    border-bottom: 30px solid #000;
+  }
+
+  .imageFull {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: auto;
+  }
+
+  .imageLeft {
+    display: inline;
+
+  }
+
+  .imageRight {
+    display: inline;
+
   }
 
   .map {
@@ -103,13 +130,10 @@ a:hover {
     margin-right: 9vw;
     margin-top: 5vh;
   }
-
-  .text {
-    position: relative;
+  .text15, .text30, .text45, .text60 {
     top: 15px;
     left: 9vw;
     width: 91vw;
-    height: auto;
   }
 
   h1 {
@@ -130,7 +154,15 @@ a:hover {
 }
 
 /*
-* LARGE DEVICES
+* L
+* L
+* L
+* L
+* Large DEVICES
+* L
+* L
+* L
+* L
 */
 @media (min-width: 769px) {
   section {
@@ -143,11 +175,31 @@ a:hover {
 
   img {
     z-index: -1;
+  }
+
+  .imageFull {
     position: absolute;
     top: 0;
     left: 0;
     width: 100vw;
     height: 100vh;
+  }
+
+  .imageLeft {
+    position: absolute;
+    left: 9vw;
+    top: 0;
+    width: 48vw;
+    height: 90vh;
+  }
+
+  .imageRight {
+    display: inline;
+    position: absolute;
+    right: 9vw;
+    top: 0;
+    width: 36vw;
+    height: 90vh;
   }
 
   .map {
@@ -156,17 +208,32 @@ a:hover {
     margin-top: 20vh;
   }
 
-  .text {
-    position: relative;
-    padding: 0 30px 3px 30px;
-    left: 33vw;
-    width: 67vw;
-    border-left: 18px solid #0000ff;
+  .text15, .text30, .text45, .text60 {
+    padding: 0 0 0 30px;
+  }
+    .text15 {
+      left: 15vw;
+      width: 40vw;
+    }
+    .text30 {
+      left: 30vw;
+      width: 70vw;
+    }
+    .text45 {
+      left: 45vw;
+      width: 55vw;
+    }
+    .text60 {
+      left: 60vw;
+      width: 40vw;
+    }
+
+  .leftBorder {
+    border-left: 15px solid #0000ff;
   }
 
   h1 {
     margin-right: 9vw;
-    margin-top: 120px;
     font-size: 48px;
     letter-spacing: .12em;
     line-height: .96em;
