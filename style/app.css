@@ -127,7 +127,7 @@ a:hover {
     margin-right: 6vw;
     margin-top: 90px;
     font-size: 36px;
-    letter-spacing: .09em;
+    letter-spacing: 0em;
     line-height: 1.3em;
   }
 
@@ -223,7 +223,7 @@ a:hover {
   h1 {
     margin-right: 9vw;
     font-size: 48px;
-    letter-spacing: .12em;
+    letter-spacing: 0em;
     line-height: .96em;
   }
 
