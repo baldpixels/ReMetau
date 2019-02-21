@@ -9,16 +9,6 @@ body {
   font-family: Helvetica;
 }
 
-#border {
-  z-index: +1;
-  width: 100vw;
-  height: 100vh;
-  position: fixed;
-  top: 0;
-  left: 0;
-  box-sizing: border-box;
-}
-
 section {
   position: relative;
   width: 100vw;
@@ -93,10 +83,6 @@ a:hover {
 
   }
 
-  #border {
-    border: 6px solid #0000ff;
-  }
-
   .imageLeft, .imageRight {
     width: 82vw;
     height: 82vw;
@@ -107,8 +93,9 @@ a:hover {
 
   .imageFull {
     position: absolute;
-    top: 0;
+    top: 50vh;
     left: 0;
+    transform: translate(0, -50%);
     width: 100vw;
     height: auto;
   }
@@ -169,10 +156,6 @@ a:hover {
 
   }
 
-  #border {
-    border: 0px solid #0000ff;
-  }
-
   img {
     z-index: -1;
   }
@@ -230,6 +213,11 @@ a:hover {
 
   .leftBorder {
     border-left: 15px solid #0000ff;
+  }
+
+  .rightBorder {
+    text-align: right;
+    border-right: 15px solid #0000ff;
   }
 
   h1 {
