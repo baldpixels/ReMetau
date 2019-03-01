@@ -4,87 +4,102 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>ReMetau</title>
+    <title>Re'Metau</title>
 
+  <!--style links-->
+    <link href="style/app.css" rel="stylesheet">
   <!--
     <link rel="shortcut icon" href="images/favicon.ico" />
   -->
 
-    <link href="style/app.css" rel="stylesheet">
+  <!-- local libraries -->
+    <script src="libraries/jquery-3.3.1.min.js"></script>
+
+  <!-- CDN libraries -->
+  <!--
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.2/TweenMax.min.js"></script>
+  -->
+
   </head>
   <body>
-    <section class="dark">
-      <img class="imageFull" src="images/remetau-intro.gif" alt="People of the Open Sea" />
-    </section>
+    <div id="footer">
+      <!-- footer grows as user scrolls down -->
+    </div>
 
-    <section>
-      <div class="text15 leftBorder">
-        <h1>Drowning Islands</h1>
-
-        <p>
-          Faraelup Atoll—along with 1500 other low-lying Pacific islands—<span class="underlined">is disappering.</span>
+    <section> <!-- textRight section -->
+      <div class="imageWrapper">
+        <p class="imageCaption captionLeft borderLeft">
+          Faraelup Atoll
         </p>
+
+        <img class="" src="images/sat-close.png" alt="Faraelup (Satellite Image #1)" />
       </div>
 
-      <img class="imageRight" src="images/satellite-image.png" alt="Farealup Atoll" />
-    </section>
-
-    <section class="dark">
-      <iframe class="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15039895.243999725!2d128.32760714134807!3d10.100525869173529!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x67aa713a17332e0b%3A0x4d4ac1eed1fda25b!2sFaraulep+Atoll!5e1!3m2!1sen!2sus!4v1550515655767" frameborder="0" allowfullscreen></iframe>
-    </section>
-
-    <section>
-      <div class="text60">
-        <h1>NASA Sea Level Change</h1>
-
-        <p>
-          Faraelup is less then 7ft above sea level at its highest point. If the rate of sea rise continues, Faraelup will be <span class="underlined">under water by 2050.</span>
-        </p>
-      </div>
-
-      <img class="imageLeft" src="images/satellite-image.png" alt="Farealup Atoll" />
-    </section>
-
-    <section>
-      <div class="text15">
-        <h1>Re'Metau</h1>
-      </div>
-
-      <div class="text45 leftBorder">
-        <p>
-          or "People of the Open Sea," is a word that describes the people of Faraelup, as well as the people from <span class="underlined">700 other islands</span> who share Faraelup's linguistic tradition.
+      <div class="textWrapper">
+        <p class="textRight">
+          <span class="highlighted">
+            Faraleup Atoll consists of 0.2 square miles of land in the middle of the Pacific Ocean. It is populated by approximately 150 people, and is considered one of the most remote civilizations in the world.
+          </span>
         </p>
       </div>
     </section>
 
-    <section>
-      <div class="text15">
-        <h1>In 1994,</h1>
+    <section class="rise"> <!-- textLeft section -->
+      <p class="textLeft">
+        <span class="highlighted">
+          Faraelup– like thousands of low-lying coral atolls– will be under water by the end of the century.
+        </span>
+      </p>
 
-        <p>
-          an American anthropologist visited Faraelup, accompanied by an NYU student and his video camera.
+      <div class="imageWrapper">
+      <!--
+        <p class="imageCaption captionRight borderRight">
+          Faraelup
         </p>
+      -->
+
+        <img class="" src="images/sat-close.png" alt="Faraelup (Satellite Image #2)" />
       </div>
     </section>
 
-    <section>
-      <div class="text60">
-        <h1>In 2020,</h1>
-
-        <p>
-          we'd like to go back back to Faraelup, record the beginning of its evacuation, and find out if it isn't too late to help...
+    <section class="rise"> <!-- textRight section -->
+      <div class="imageWrapper">
+      <!--
+        <p class="imageCaption captionLeft borderLeft">
+          People of the Open Sea
         </p>
+      -->
+
+        <img class="" src="images/sat-close.png" alt="Faraelup (Satellite Image #1)" />
+      </div>
+
+      <p class="textRight">
+        <span class="highlighted">
+          In 1994, anthropologist Patrick O'Brien travled to Faraelup with a young film student, seeking to document the lives of the Re'Metau ("People of the Open Sea.")
+        </span>
+      </p>
+    </section>
+
+    <section class="rise"> <!-- textLeft section -->
+      <p class="textLeft">
+        <span class="highlighted">
+          We'd like to return to Faraelup, record the beginning of its evacuation, and find out if it isn't too late to help...
+        </span>
+      </p>
+
+      <div class="imageWrapper">
+      <!--
+        <p class="imageCaption captionRight borderRight">
+          Faraelup
+        </p>
+      -->
+
+        <img class="" src="images/sat-close.png" alt="Faraelup (Satellite Image #2)" />
       </div>
     </section>
 
-    <section>
-      <div class="text45 leftBorder">
-        <p>
-          Please share Faraelup's story.
-        </p>
-      </div>
-    </section>
-
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="js/scroll-animations.js"></script>
   </body>
 </html>
