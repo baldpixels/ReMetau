@@ -4,6 +4,16 @@
 * black: #000000
 */
 
+@font-face {
+  font-family: "Mission Gothic";
+  src: url("style/fonts/Mission-Gothic-Black.otf") format("otf");
+}
+
+@font-face {
+  font-family: "Andale Mono";
+  src: url("style/fonts/Andale-Mono.ttf") format("ttf");
+}
+
 html {
 
 }
@@ -15,14 +25,50 @@ body {
   width: 100vw;
   height: 100vh;
   overflow-y: scroll;
+  overflow-x: hidden;
 }
 
-#footer {
-  z-index: -1;
+#header {
+  z-index: +1;
+  position: fixed;
+  top: 0;
+  left: 0;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  width: 100vw;
+  background-color: #0000ff;
+  color: #f4f4f4;
+  font-family: "Mission Gothic";
+}
+
+#header h1 {
+  flex: 1 50%;
+  text-align: right;
+  margin-right: 12px;
+}
+
+#logo {
+  object-fit: contain;
+  object-position: left;
+  height: 66%;
+  width: auto;
+  flex: 1 50%;
+  margin-left: 12px;
+}
+
+#ocean {
+  z-index: 0;
   position: fixed;
   bottom: 0;
   width: 100vw;
   background-color: #0000ff;
+}
+
+#island {
+  position: fixed;
+  top: 0;
+  z-index: -1;
 }
 
 section {
@@ -45,8 +91,7 @@ img {
 }
 
 .imageCaption {
-  font-family: Helvetica;
-  font-weight: bolder;
+  font-family: "Mission Gothic";
 }
 
 .textWrapper {
@@ -61,13 +106,13 @@ h1 {
 
 p {
   color: #f4f4f4;
+  font-family: "Andale Mono";
 }
 
 .textLeft {
   flex: 0 50%;
   height: auto;
   padding: 0;
-  font-family: monospace;
   text-align: left;
   padding: 3px 0 3px 0;
 }
@@ -76,7 +121,6 @@ p {
   flex: 0 50%;
   height: auto;
   padding: 0;
-  font-family: monospace;
   text-align: right;
   padding: 3px 0 3px 0;
 }
@@ -130,6 +174,19 @@ a:hover {
 * S
 */
 @media (max-width: 768px) {
+  #header {
+    height: 60px;
+  }
+
+  #header h1 {
+    font-size: 15px;
+  }
+
+  #island {
+    height: 100vh;
+    object-fit: cover;
+  }
+
   section {
     flex-direction: column;
   }
@@ -153,7 +210,7 @@ a:hover {
   p {
     font-size: 12px;
     letter-spacing: .15em;
-    line-height: 1.8em;
+    line-height: 2em;
   }
 
   .textLeft {
@@ -180,6 +237,20 @@ a:hover {
 * L
 */
 @media (min-width: 769px) {
+  #header {
+    height: 75px;
+  }
+
+  #header h1 {
+    font-size: 18px;
+  }
+
+  #island {
+    height: 120vh;
+    object-fit: cover;
+    object-position: top;
+  }
+
   section {
     flex-flow: row nowrap;
   }
@@ -202,7 +273,7 @@ a:hover {
   p {
     font-size: 15px;
     letter-spacing: .09em;
-    line-height: 1.66em;
+    line-height: 1.75em;
   }
 
   .textLeft {

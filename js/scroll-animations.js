@@ -1,9 +1,8 @@
 $( document ).ready( function() {
 
   var wrapper = $("#wrapper");
-  var footer = $("#footer");
+  var ocean = $("#ocean");
 
-  var windowHeight = $(window).height();
   var scrollPercent = 0;
   var riseHeight = 0;
   var initialHeight = 30;
@@ -27,8 +26,15 @@ $( document ).ready( function() {
     let precision = 10000;
     scrollPercent = Math.round( precision * $(window).scrollTop() / ($(document).height() - $(window).height()) ) / precision;
 
-    riseHeight = initialHeight + scrollPercent * windowHeight;
-    footer.css('height', riseHeight);
+    console.log(wrapper.height());
+    console.log($(window).height());
+    console.log($(document).height());
+
+    riseHeight = initialHeight + scrollPercent * $(window).height();
+
+    //console.log(riseHeight);
+
+    ocean.css('height', riseHeight);
   }
 
 // EVENT LISTENERS
