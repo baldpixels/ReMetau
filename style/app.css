@@ -195,7 +195,7 @@ a:hover {
   }
 
   .icon {
-    width: 30vw;
+    width: 12vw;
   }
 
   .imageWrapper {
@@ -216,7 +216,7 @@ a:hover {
   }
 
   .bigText {
-    line-height: 0.75em;
+    line-height: 0.81em;
     font-size: 150px;
   }
 
@@ -241,8 +241,12 @@ a:hover {
     margin-left: 60px;
   }
 
+  .textCenter {
+    flex-grow: 0;
+  }
+
   a:hover {
-    border-bottom: 15px solid #000;
+
   }
 }
 
@@ -269,7 +273,11 @@ a:hover {
   }
 
   .icon {
-    width: 15vw;
+    width: 12vh;
+  }
+
+  .icon:hover {
+
   }
 
   .imageWrapper {
@@ -310,9 +318,5 @@ a:hover {
   .textRight {
     margin-right: 30px;
     margin-left: 15px;
-  }
-
-  .icon:hover {
-    border-left: 15px solid #000;
   }
 }
