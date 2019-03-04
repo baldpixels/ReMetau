@@ -209,10 +209,13 @@ a:hover {
   }
 
   h1 {
-    width: 60%;
     font-size: 60px;
     letter-spacing: -0.03em;
     line-height: 0.9em;
+  }
+
+  #title {
+    width: 66%;
   }
 
   .bigText {
@@ -292,10 +295,19 @@ a:hover {
   }
 
   h1 {
-    width: 66%;
-    font-size: 150px;
+    font-size: 120px;
     letter-spacing: -0.03em;
     line-height: 1em;
+  }
+
+  #title {
+    width: 50%;
+    margin-right: 30%;
+    margin-left: 12px;
+  }
+
+  #subtitle {
+
   }
 
   .bigText {
