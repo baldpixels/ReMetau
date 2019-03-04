@@ -211,13 +211,14 @@ a:hover {
   h1 {
     width: 60%;
     font-size: 60px;
-    letter-spacing: -0.05em;
+    letter-spacing: -0.03em;
     line-height: 0.9em;
   }
 
   .bigText {
-    line-height: 0.81em;
+    line-height: 3.6em;
     font-size: 150px;
+    display: block;
   }
 
   p {
@@ -274,6 +275,7 @@ a:hover {
 
   .icon {
     width: 12vh;
+    display: block;
   }
 
   .icon:hover {
