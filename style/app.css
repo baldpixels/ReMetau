@@ -61,15 +61,19 @@ section {
   margin: 0;
 }
 
+.iconWrapper {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  margin: auto;
+}
+
 .icon {
-  box-sizing: content-box;
-  object-fit: cover;
-  object-position: center;
-  padding: 30px;
+  margin: 90px;
 }
 
 .icon:hover {
-
+  filter: invert(1);
 }
 
 .imageWrapper {
@@ -131,6 +135,7 @@ p {
 .textCenter {
   flex: 0 100%;
   height: auto;
+  margin: auto;
   text-align: center;
   padding: 3px 0 3px 0;
 }
@@ -195,7 +200,11 @@ a:hover {
   }
 
   .icon {
-    width: 12vw;
+    width: 75px;
+  }
+
+  .iconWrapper {
+    flex-direction: column;
   }
 
   .imageWrapper {
@@ -245,10 +254,6 @@ a:hover {
     margin-left: 60px;
   }
 
-  .textCenter {
-    flex-grow: 0;
-  }
-
   a:hover {
 
   }
@@ -277,12 +282,11 @@ a:hover {
   }
 
   .icon {
-    width: 12vh;
-    display: block;
+    width: 120px;
   }
 
-  .icon:hover {
-
+  .iconWrapper {
+    flex-direction: row;
   }
 
   .imageWrapper {
