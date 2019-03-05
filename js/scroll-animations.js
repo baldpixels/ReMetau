@@ -75,7 +75,7 @@ $( document ).ready( function() {
           animateIn(this.element);
         }
       },
-      offset: '100%'
+      offset: '120%'
     });
   }
 
