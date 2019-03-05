@@ -29,12 +29,7 @@ body {
 }
 
 #logo {
-  object-fit: contain;
-  object-position: left;
-  height: 66%;
-  width: auto;
-  flex: 1 50%;
-  margin-left: 12px;
+
 }
 
 #ocean {
@@ -110,8 +105,6 @@ h1 {
 .subtitle {
   font-family: "Andale Mono";
   font-size: 18px;
-  text-align: center;
-  border-top: 3px solid #f4f4f4;
 }
 
 p {
@@ -229,6 +222,10 @@ a:hover {
     width: 66%;
   }
 
+  .subtitle {
+    border-top: 3px solid #f4f4f4;
+  }
+
   .bigText {
     line-height: 3.6em;
     font-size: 150px;
@@ -314,7 +311,7 @@ a:hover {
   }
 
   .subtitle {
-
+    z-index: -2;
   }
 
   .bigText {
