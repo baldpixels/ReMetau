@@ -41,7 +41,6 @@ body {
 }
 
 #island {
-  width: 100%;
   position: fixed;
   top: 0;
   z-index: -1;
@@ -204,9 +203,15 @@ a:hover {
 */
 @media (max-width: 768px) {
   #island {
-    width: 100%;
     height: 100vh;
+    height: 100vh;
+  }
+
+  #island img {
+    width: 100%;
+    height: 100%;
     object-fit: cover;
+    object-position: center;
   }
 
   section {
@@ -292,8 +297,13 @@ a:hover {
   #island {
     width: 100%;
     height: 120vh;
+  }
+
+  #island img {
+    width: 100%;
+    height: 100%;
     object-fit: cover;
-    object-position: right;
+    object-position: center;
   }
 
   section {
