@@ -103,6 +103,9 @@ h1 {
 }
 
 .subtitle {
+  margin-top: 50%;
+  color: #f4f4f4;
+  padding-top: 12px;
   font-family: "Andale Mono";
   font-size: 18px;
 }
@@ -168,8 +171,13 @@ a {
   color: #f4f4f4;
   text-decoration: none;
 }
+
 a:hover {
-  color: #0000ff;
+
+}
+
+.link:hover {
+  border-bottom: 3px solid #f4f4f4;
 }
 
 /*
@@ -311,7 +319,7 @@ a:hover {
   }
 
   .subtitle {
-    z-index: -2;
+    z-index: -3;
   }
 
   .bigText {
