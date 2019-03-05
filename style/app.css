@@ -5,12 +5,12 @@
 */
 
 @font-face {
-  font-family: "Mission Gothic";
+  font-family: "Mission Gothic" sans-serif;
   src: url("style/fonts/Mission-Gothic-Black.otf") format("otf");
 }
 
 @font-face {
-  font-family: "Andale Mono";
+  font-family: "Andale Mono" monospace;
   src: url("style/fonts/Andale-Mono.ttf") format("ttf");
 }
 
@@ -41,6 +41,7 @@ body {
 }
 
 #island {
+  width: 100%;
   position: fixed;
   top: 0;
   z-index: -1;
@@ -313,8 +314,7 @@ a:hover {
   }
 
   .title {
-    width: 50%;
-    margin-right: 30%;
+    width: 45%;
     margin-left: 12px;
   }
 
