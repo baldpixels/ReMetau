@@ -92,6 +92,7 @@ img, video {
   background-color: #000;
   font-family: "Mission Gothic";
   padding: 6px;
+  visibility: hidden;
 }
 
 .textWrapper {
@@ -149,12 +150,10 @@ p {
 
 .captionLeft {
   text-align: left;
-  visibility: hidden;
 }
 
 .captionRight {
   text-align: right;
-  visibility: hidden;
 }
 
 .borderLeft {
