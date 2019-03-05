@@ -72,7 +72,7 @@ $( document ).ready( function() {
       element: document.getElementById(ids[i]),
       handler: function(direction) {
         if(direction == 'down') {
-          animateIn(this.element);
+          //animateIn(this.element);
         }
       },
       offset: '120%'
