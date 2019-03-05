@@ -66,6 +66,7 @@ section {
 
 .icon {
   margin: 90px;
+  visibility: hidden;
 }
 
 .icon:hover {
@@ -80,6 +81,10 @@ section {
 
 img, video {
   box-sizing: border-box;
+}
+
+.media {
+  visibility: hidden;
 }
 
 .imageCaption {
@@ -109,6 +114,7 @@ h1 {
   padding-top: 12px;
   font-family: "Andale Mono";
   font-size: 18px;
+  visibility: hidden;
 }
 
 p {
@@ -121,6 +127,7 @@ p {
   height: auto;
   text-align: left;
   padding: 3px 0 3px 0;
+  visibility: hidden;
 }
 
 .textRight {
@@ -128,6 +135,7 @@ p {
   height: auto;
   text-align: right;
   padding: 3px 0 3px 0;
+  visibility: hidden;
 }
 
 .textCenter {
@@ -136,14 +144,17 @@ p {
   margin: auto;
   text-align: center;
   padding: 3px 0 3px 0;
+  visibility: hidden;
 }
 
 .captionLeft {
   text-align: left;
+  visibility: hidden;
 }
 
 .captionRight {
   text-align: right;
+  visibility: hidden;
 }
 
 .borderLeft {
