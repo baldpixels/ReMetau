@@ -5,13 +5,23 @@
 */
 
 @font-face {
-  font-family: "Mission Gothic" sans-serif;
-  src: url("style/fonts/Mission-Gothic-Black.otf") format("otf");
+  font-family: "Mission Gothic";
+  src: url('style/fonts/MissionGothic-Black.eot'); /* IE9 Compat Modes */
+  src: url('style/fonts/MissionGothic-Black.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('style/fonts/MissionGothic-Black.woff2') format('woff2'), /* Super Modern Browsers */
+       url('style/fonts/MissionGothic-Black.woff') format('woff'), /* Pretty Modern Browsers */
+       url('style/fonts/MissionGothic-Black.ttf')  format('truetype'), /* Safari, Android, iOS */
+       url('style/fonts/MissionGothic-Black.svg#svgFontName') format('svg'); /* Legacy iOS */
 }
 
 @font-face {
-  font-family: "Andale Mono" monospace;
-  src: url("style/fonts/Andale-Mono.ttf") format("ttf");
+  font-family: "Andale Mono";
+  src: url('style/fonts/AndaleMono.eot'); /* IE9 Compat Modes */
+  src: url('style/fonts/AndaleMono.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('style/fonts/AndaleMono.woff2') format('woff2'), /* Super Modern Browsers */
+       url('style/fonts/AndaleMono.woff') format('woff'), /* Pretty Modern Browsers */
+       url('style/fonts/AndaleMono.ttf')  format('truetype'), /* Safari, Android, iOS */
+       url('style/fonts/AndaleMono.svg#svgFontName') format('svg'); /* Legacy iOS */
 }
 
 html {
@@ -65,14 +75,13 @@ section {
 
 .icon {
   margin: 90px;
-  visibility: hidden;
 }
 
 .icon:hover {
   filter: invert(1);
 }
 
-.imageWrapper {
+.mediaWrapper {
   flex: 1 50%;
   width: 100%;
   height: auto;
@@ -83,15 +92,14 @@ img, video {
 }
 
 .media {
-  visibility: hidden;
+
 }
 
-.imageCaption {
+.mediaCaption {
   box-sizing: border-box;
   background-color: #000;
-  font-family: "Mission Gothic";
+  font-family: "Mission Gothic", sans-serif;
   padding: 6px;
-  visibility: hidden;
 }
 
 .textWrapper {
@@ -112,14 +120,13 @@ h1 {
   margin-top: 50%;
   color: #f4f4f4;
   padding-top: 12px;
-  font-family: "Andale Mono";
+  font-family: "Andale Mono", monospace;
   font-size: 18px;
-  visibility: hidden;
 }
 
 p {
   color: #f4f4f4;
-  font-family: "Andale Mono";
+  font-family: "Andale Mono", monospace;
 }
 
 .textLeft {
@@ -127,7 +134,6 @@ p {
   height: auto;
   text-align: left;
   padding: 3px 0 3px 0;
-  visibility: hidden;
 }
 
 .textRight {
@@ -135,7 +141,6 @@ p {
   height: auto;
   text-align: right;
   padding: 3px 0 3px 0;
-  visibility: hidden;
 }
 
 .textCenter {
@@ -144,7 +149,6 @@ p {
   margin: auto;
   text-align: center;
   padding: 3px 0 3px 0;
-  visibility: hidden;
 }
 
 .captionLeft {
@@ -226,7 +230,7 @@ a:hover {
     flex-direction: column;
   }
 
-  .imageWrapper {
+  .mediaWrapper {
     margin: 12px 12px 0 12px;
   }
 
@@ -262,7 +266,7 @@ a:hover {
     line-height: 2em;
   }
 
-  .imageCaption {
+  .mediaCaption {
     font-size: 18px;
   }
 
@@ -318,7 +322,7 @@ a:hover {
     flex-direction: row;
   }
 
-  .imageWrapper {
+  .mediaWrapper {
     margin: 0 30px 0 30px;
   }
 
@@ -352,7 +356,7 @@ a:hover {
     line-height: 1.75em;
   }
 
-  .imageCaption {
+  .mediaCaption {
     font-size: 30px;
   }
 
