@@ -8,7 +8,6 @@ $( document ).ready( function() {
   var initialHeight = 30;
 
 // SETUP
-  var riseAmount = $(window).height() / ids.length;
 
 // FUNCTIONS
   function seaLevelChange() {

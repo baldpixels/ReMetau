@@ -67,15 +67,22 @@ section {
   margin: 0;
 }
 
+.row-only {
+  flex-flow: column;
+}
+
 .iconWrapper {
+  width: 100%;
   display: flex;
-  flex-direction: column;
-  text-align: center;
-  margin: auto;
+  align-items: center;
+  justify-content: space-around;
+  margin: 0;
+  padding: 0;
+  margin-bottom: 90px;
 }
 
 .icon {
-  margin: 90px;
+  flex: 1 50%;
 }
 
 .icon:hover {
@@ -130,26 +137,30 @@ h2 {
   border-top: 3px solid #f4f4f4;
 }
 
+.text-big {
+  display: block;
+}
+
 p {
   color: #f4f4f4;
   font-family: "Andale Mono", monospace;
 }
 
-.textLeft {
+.text-left {
   flex: 0 50%;
   height: auto;
   text-align: left;
   padding: 3px 0 3px 0;
 }
 
-.textRight {
+.text-right {
   flex: 0 50%;
   height: auto;
   text-align: right;
   padding: 3px 0 3px 0;
 }
 
-.textCenter {
+.text-center {
   flex: 0 100%;
   height: auto;
   margin: auto;
@@ -157,21 +168,21 @@ p {
   padding: 3px 0 3px 0;
 }
 
-.captionLeft {
+.caption-left {
   text-align: left;
 }
 
-.captionRight {
+.caption-right {
   text-align: right;
 }
 
-.borderLeft {
+.border-left {
   padding-left: 12px;
   border-left: 3px solid #0000ff;
   box-shadow: -30px 0 #000;
 }
 
-.borderRight {
+.border-right {
   padding-right: 12px;
   border-right: 3px solid #0000ff;
   box-shadow: 30px 0 #000;
@@ -233,7 +244,7 @@ a:hover {
   }
 
   .iconWrapper {
-    flex-direction: column;
+
   }
 
   .mediaWrapper {
@@ -259,10 +270,9 @@ a:hover {
     margin-top: 50%;
   }
 
-  .bigText {
+  .text-big {
     line-height: 3.6em;
     font-size: 150px;
-    display: block;
   }
 
   p {
@@ -275,13 +285,13 @@ a:hover {
     font-size: 18px;
   }
 
-  .textLeft {
+  .text-left {
     order: 1;
     margin-right: 60px;
     margin-left: 12px;
   }
 
-  .textRight {
+  .text-right {
     margin-right: 12px;
     margin-left: 60px;
   }
@@ -321,12 +331,12 @@ a:hover {
     flex-flow: row nowrap;
   }
 
-  .icon {
-    width: 120px;
+  .iconWrapper {
+
   }
 
-  .iconWrapper {
-    flex-direction: row;
+  .icon {
+    width: 120px;
   }
 
   .mediaWrapper {
@@ -350,7 +360,7 @@ a:hover {
     z-index: -3;
   }
 
-  .bigText {
+  .text-big {
     font-size: 150px;
   }
 
@@ -364,12 +374,12 @@ a:hover {
     font-size: 30px;
   }
 
-  .textLeft {
+  .text-left {
     margin-right: 15px;
     margin-left: 30px;
   }
 
-  .textRight {
+  .text-right {
     margin-right: 30px;
     margin-left: 15px;
   }
