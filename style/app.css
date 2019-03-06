@@ -109,19 +109,25 @@ img, video {
 }
 
 h1 {
-  font-family: "Mission Gothic";
+  font-family: "Mission Gothic", sans-serif;
   color: #f4f4f4;
   filter: drop-shadow(3px 3px 0px #0000ff);
   text-align: center;
   text-transform: uppercase;
 }
 
-.subtitle {
-  margin-top: 50%;
-  color: #f4f4f4;
+h2 {
+  position: absolute;
+  bottom: 90px;
   padding-top: 12px;
+  padding-bottom: 12px;
+  color: #f4f4f4;
   font-family: "Andale Mono", monospace;
+  font-weight: lighter;
   font-size: 18px;
+  text-align: center;
+  border-top: 3px solid #f4f4f4;
+  border-bottom: 3px solid #f4f4f4;
 }
 
 p {
@@ -241,17 +247,15 @@ a:hover {
   }
 
   h1 {
+    width: 330px;
     font-size: 60px;
     letter-spacing: 0em;
-    line-height: 0.9em;
+    line-height: .9em;
   }
 
-  .title {
-    width: 66%;
-  }
-
-  .subtitle {
-    border-top: 3px solid #f4f4f4;
+  h2 {
+    width: 180px;
+    margin-top: 50%;
   }
 
   .bigText {
@@ -332,17 +336,14 @@ a:hover {
   }
 
   h1 {
+    width: 600px;
+    margin-left: 12px;
     font-size: 120px;
     letter-spacing: -0.03em;
     line-height: 1em;
   }
 
-  .title {
-    width: 45%;
-    margin-left: 12px;
-  }
-
-  .subtitle {
+  h2 {
     z-index: -3;
   }
 
