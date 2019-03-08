@@ -273,8 +273,8 @@ a:hover {
   }
 
   .text-big {
-    line-height: 3.6em;
-    font-size: 150px;
+    line-height: 0.9em;
+    font-size: 120px;
   }
 
   p {
@@ -363,7 +363,8 @@ a:hover {
   }
 
   .text-big {
-    font-size: 150px;
+    font-size: 180px;
+    line-height: 0.9em;
   }
 
   p {
