@@ -117,6 +117,8 @@ img, video {
 }
 
 h1 {
+  z-index: -1;
+  position: fixed;
   font-family: "Mission Gothic", sans-serif;
   color: #f4f4f4;
   filter: drop-shadow(3px 3px 0px #0000ff);
@@ -125,10 +127,10 @@ h1 {
 }
 
 h2 {
-  position: absolute;
-  bottom: 90px;
+  z-index: -1;
+  position: fixed;
+  bottom: 45px;
   padding-top: 12px;
-  padding-bottom: 12px;
   color: #f4f4f4;
   font-family: "Andale Mono", monospace;
   font-weight: lighter;
@@ -261,7 +263,7 @@ a:hover {
     width: 330px;
     font-size: 60px;
     letter-spacing: 0em;
-    line-height: .9em;
+    line-height: 1.1em;
   }
 
   h2 {
