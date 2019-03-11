@@ -29,17 +29,16 @@ $( document ).ready( function() {
     arrow.hide();
     arrow.css("visibility", "visible");
 
-      var fadeInTime = 1200;
-
-      arrow.fadeIn({ duration: fadeInTime / 3, queue: false });
+      var fadeInTime = 900;
+      arrow.fadeIn({ duration: fadeInTime * 1.5, queue: false });
 
       arrow.animate({
         bottom: '-=15px'
-      }, { duration: fadeInTime / 2, queue: false });
+      }, { duration: fadeInTime * 1.5, queue: false });
 
       ocean.animate({
         height: '+=' + initialHeight
-      }, { duration: fadeInTime, queue: false });
+      }, { duration: fadeInTime * 1.5, queue: false });
   }
 
 // EVENT LISTENERS
@@ -47,5 +46,8 @@ $( document ).ready( function() {
     requestAnimationFrame(seaLevelChange);
   });
 
-  introFade();
+  if($(window).scrollTop() < 1) {
+    introFade();
+  }
+  seaLevelChange();
 })
