@@ -1,6 +1,7 @@
 $( document ).ready( function() {
 
   var ocean = $("#ocean");
+  var title = $("h1");
   var fadeInTime = 600;
 
 // Scroll Animation Variables
@@ -22,9 +23,11 @@ $( document ).ready( function() {
   }
 
   function introAnimation() {
-    ocean.animate({
-      height: '+=' + initialHeight
-    }, { duration: fadeInTime * 1.5, queue: false });
+    title.fadeIn(fadeInTime*2, function(){
+      ocean.animate({
+        height: '+=' + initialHeight
+      }, { duration: fadeInTime * 1.5, queue: false });
+    });
   }
 
 // EVENT LISTENERS
@@ -34,5 +37,4 @@ $( document ).ready( function() {
   });
 
   introAnimation();
-  seaLevelChange();
 })

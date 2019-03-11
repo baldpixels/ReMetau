@@ -43,7 +43,14 @@ body {
 }
 
 h1 {
-
+  z-index: -1;
+  position: fixed;
+  text-transform: uppercase;
+  font-family: "Franklin Gothic Medium", "Franklin Gothic", "ITC Franklin Gothic", Helvetica, sans-serif;
+  font-weight: 700;
+  color: #f4f4f4;
+  filter: drop-shadow(0 3px 0 #0000ff);
+  display: none;
 }
 
 h2 {
@@ -256,8 +263,14 @@ a:hover {
     order: 0;
   }
 
+  /* SMALL */
   h1 {
-
+    bottom: 66vh;
+    left: 50%;
+    transform: translate(-50%, 33%);
+    font-size: 60px;
+    width: 330px;
+    text-align: center;
   }
 
   h2 {
@@ -341,8 +354,14 @@ a:hover {
     height: auto;
   }
 
+  /* LARGE */
   h1 {
-
+    left: 66%;
+    bottom: 50%;
+    transform: translate(-33%, 66%);
+    width: 390px;
+    font-size: 90px;
+    text-align: right;
   }
 
   h2 {
