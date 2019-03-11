@@ -29,7 +29,7 @@ $( document ).ready( function() {
     arrow.hide();
     arrow.css("visibility", "visible");
 
-      var fadeInTime = 900;
+      var fadeInTime = 600;
       arrow.fadeIn({ duration: fadeInTime * 1.5, queue: false });
 
       arrow.animate({

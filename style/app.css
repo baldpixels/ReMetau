@@ -73,7 +73,7 @@ section {
   align-items: center;
   justify-content: space-around;
   margin: 0;
-  padding: 300px;
+  padding: 33vh;
 }
 
 .icon {
@@ -107,8 +107,8 @@ video:hover {
 .mediaCaption {
   box-sizing: border-box;
   background-color: #000;
-  font-family: freight-sans-pro, sans-serif;
-  font-weight: 300;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 700;
   font-style: normal;
   padding: 6px;
 }
@@ -122,9 +122,10 @@ video:hover {
 h1 {
   z-index: -1;
   position: fixed;
-  font-family: freight-sans-pro, sans-serif;
-  font-weight: 300;
-  font-style: normal;  color: #f4f4f4;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  color: #f4f4f4;
   filter: drop-shadow(3px 3px 0px #0000ff);
   text-align: center;
   text-transform: uppercase;
