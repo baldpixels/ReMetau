@@ -8,7 +8,7 @@ $( document ).ready( function() {
   var precision = 10000;
   var initialHeight = 30;
   var scrollPercent = 0;
-  var overshoot = 20;
+  var overshoot = 60;
 
 // FUNCTIONS
   function calcScrollPercent() {
