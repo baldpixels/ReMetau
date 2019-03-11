@@ -53,8 +53,6 @@ h1 {
   color: #f4f4f4;
   filter: drop-shadow(0 3px 0 #0000ff);
   display: none;
-  -webkit-transform: perspective(400px) rotateZ(90deg); /* Safari */
-  transform: perspective(400px) rotateZ(90deg);
 }
 
 h2 {
@@ -128,18 +126,6 @@ section {
   display: flex;
   flex: 0 50%;
   flex-direction: column;
-}
-
-#arrow-down {
-  z-index: 0;
-  width: 30px;
-  height: 30px;
-  position: fixed;
-  left: 50%;
-  transform: translate(-50%, 0);
-  bottom: 15px;
-  object-fit: contain;
-  object-position: center;
 }
 
 .text-big {
@@ -270,6 +256,7 @@ a:hover {
   h1 {
     bottom: 72vh;
     left: 50%;
+    -webkit-transform: perspective(300px) translate(-50%, 33%) rotateX(12deg) rotateZ(-3deg);
     transform: perspective(300px) translate(-50%, 33%) rotateX(12deg) rotateZ(-3deg);
     width: 330px;
     font-size: 60px;
@@ -363,7 +350,8 @@ a:hover {
   h1 {
     left: 66%;
     bottom: 50%;
-    transform: perspective(300px) translate(-33%, 33%) rotateX(12deg) rotateY(0deg) rotateZ(0deg);
+    -webkit-transform: perspective(300px) translate(-33%, 50%) rotateX(12deg) rotateY(0deg) rotateZ(0deg);
+    transform: perspective(300px) translate(-33%, 50%) rotateX(12deg) rotateY(0deg) rotateZ(0deg);
     width: 390px;
     font-size: 90px;
     line-height: 1em;
