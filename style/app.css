@@ -14,7 +14,7 @@
 }
 
 html {
-
+  overflow: hidden;
 }
 
 body {
@@ -25,10 +25,6 @@ body {
   height: 100vh;
   overflow-y: scroll;
   overflow-x: hidden;
-}
-
-#logo {
-
 }
 
 #ocean {
@@ -42,16 +38,25 @@ body {
 #island {
   position: fixed;
   top: 0;
+  left: 0;
   z-index: -1;
+}
+
+h1 {
+
+}
+
+h2 {
+
 }
 
 section {
   width: 100vw;
   height: 100vh;
   min-height: 480px;
+  position: relative;
   display: flex;
   align-items: center;
-  position: relative;
   padding: 0;
   margin: 0;
 }
@@ -78,6 +83,7 @@ section {
 
 .icon {
   flex: 1 50%;
+  box-sizing: border-box;
 }
 
 .icon:hover {
@@ -90,17 +96,12 @@ section {
   height: auto;
 }
 
-img, video {
+.media {
   z-index: +1;
   box-sizing: border-box;
 }
 
-video:hover {
-  box-shadow: 0 12px 0 #f4f4f4;
-  filter: drop-shadow(0 -12px 0 #f4f4f4);
-}
-
-.media {
+.media:hover {
 
 }
 
@@ -117,31 +118,6 @@ video:hover {
   display: flex;
   flex: 0 50%;
   flex-direction: column;
-}
-
-h1 {
-  z-index: -1;
-  position: fixed;
-  font-family: 'Roboto', sans-serif;
-  font-weight: 700;
-  font-style: normal;
-  color: #f4f4f4;
-  filter: drop-shadow(3px 3px 0px #0000ff);
-  text-align: center;
-  text-transform: uppercase;
-}
-
-h2 {
-  z-index: -1;
-  position: fixed;
-  bottom: 60px;
-  padding-top: 12px;
-  color: #f4f4f4;
-  font-family: "Andale Mono", monospace;
-  font-weight: lighter;
-  font-size: 15px;
-  text-align: center;
-  border-top: 3px solid #f4f4f4;
 }
 
 #arrow-down {
@@ -248,6 +224,7 @@ a:hover {
   #island {
     height: 100vh;
     min-height: 600px;
+    width: 100vw;
   }
 
   #island img {
@@ -261,16 +238,16 @@ a:hover {
     flex-direction: column;
   }
 
-  .icon {
-    width: 75px;
-  }
-
   .iconWrapper {
 
   }
 
+  .icon {
+    width: 75px;
+  }
+
   .mediaWrapper {
-    margin: 12px 12px 0 12px;
+
   }
 
   .media {
@@ -280,21 +257,15 @@ a:hover {
   }
 
   h1 {
-    width: 330px;
-    font-size: 60px;
-    letter-spacing: 0em;
-    line-height: 1.1em;
+
   }
 
   h2 {
-    font-size: 14px;
-    width: 180px;
-    margin-top: 50%;
+
   }
 
   .text-big {
-    line-height: 0.9em;
-    font-size: 120px;
+
   }
 
   p {
@@ -371,20 +342,15 @@ a:hover {
   }
 
   h1 {
-    width: 480px;
-    margin-left: 12px;
-    font-size: 90px;
-    letter-spacing: -0.03em;
-    line-height: 1em;
+
   }
 
   h2 {
-    z-index: -3;
+
   }
 
   .text-big {
-    font-size: 180px;
-    line-height: 0.9em;
+
   }
 
   p {

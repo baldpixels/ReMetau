@@ -1,53 +1,38 @@
 $( document ).ready( function() {
 
-  var wrapper = $("#wrapper");
   var ocean = $("#ocean");
+  var fadeInTime = 600;
 
-  var arrow = $("#arrow-down");
-
+// Scroll Animation Variables
   var precision = 10000;
-  var scrollPercent = Math.round( precision * $(window).scrollTop() / ($(document).height() - $(window).height() - overshoot) ) / precision;
-  var initialHeight = 60;
+  var initialHeight = 30;
+  var scrollPercent = 0;
   var overshoot = 10;
 
-// SETUP
-
 // FUNCTIONS
+  function calcScrollPercent() {
+    return Math.round( precision * $('body').scrollTop() / ($(document).height() - $(window).height() - overshoot) ) / precision;
+  }
+
   function seaLevelChange() {
-    scrollPercent = Math.round( precision * $(window).scrollTop() / ($(document).height() - $(window).height() - overshoot) ) / precision;
+    scrollPercent = calcScrollPercent();
 
-    if(scrollPercent > 0) {
-      arrow.fadeTo('medium', 0);
-    }
-
-    var riseHeight = initialHeight + scrollPercent * $(window).height();
-
+    let riseHeight = initialHeight + scrollPercent * $(window).height();
     ocean.css('height', riseHeight);
   }
 
-  function introFade() {
-    arrow.hide();
-    arrow.css("visibility", "visible");
-
-      var fadeInTime = 600;
-      arrow.fadeIn({ duration: fadeInTime * 1.5, queue: false });
-
-      arrow.animate({
-        bottom: '-=15px'
-      }, { duration: fadeInTime * 1.5, queue: false });
-
-      ocean.animate({
-        height: '+=' + initialHeight
-      }, { duration: fadeInTime * 1.5, queue: false });
+  function introAnimation() {
+    ocean.animate({
+      height: '+=' + initialHeight
+    }, { duration: fadeInTime * 1.5, queue: false });
   }
 
 // EVENT LISTENERS
-  $(window).scroll(function() {
+  $('body').scroll(function() {
+    ocean.stop();
     requestAnimationFrame(seaLevelChange);
   });
 
-  if($(window).scrollTop() < 1) {
-    introFade();
-  }
+  introAnimation();
   seaLevelChange();
 })
