@@ -3,42 +3,50 @@ $( document ).ready( function() {
   var wrapper = $("#wrapper");
   var ocean = $("#ocean");
 
+  var arrow = $("#arrow-down");
+
   var scrollPercent = 0;
-  var riseHeight = 0;
-  var initialHeight = 30;
-  var titleFadePercent = .05;
-  var titleOn = true;
+  var initialHeight = 60;
+  var overshoot = 10;
 
 // SETUP
 
 // FUNCTIONS
   function seaLevelChange() {
     let precision = 10000;
-    scrollPercent = Math.round( precision * $(window).scrollTop() / ($(document).height() - $(window).height()) ) / precision;
+    scrollPercent = Math.round( precision * $(window).scrollTop() / ($(document).height() - $(window).height() - overshoot) ) / precision;
 
-    if(titleOn) {
-      console.log("titleOn check");
-
-      if(scrollPercent > titleFadePercent) {
-        $('h1').fadeTo('slow', 0);
-        titleOn = false;
-      }
-    } else {
-      if(scrollPercent <= titleFadePercent) {
-        $('h1').fadeTo('slow', 1);
-        titleOn = true;
-      }
+    if(scrollPercent > 0) {
+      $('#arrow-down').fadeTo('medium', 0);
     }
 
-    riseHeight = initialHeight + scrollPercent * $(window).height();
+    var riseHeight = initialHeight + scrollPercent * $(window).height();
 
     ocean.css('height', riseHeight);
   }
 
+  function introFade() {
+    arrow.hide();
+    arrow.css("visibility", "visible");
+
+    var fadeInTime = 1200;
+
+    arrow.fadeIn({ duration: fadeInTime / 3, queue: false });
+
+    arrow.animate({
+      bottom: '-=15px'
+    }, { duration: fadeInTime / 2, queue: false });
+  }
+
+  function animate() {
+    seaLevelChange();
+  }
+
 // EVENT LISTENERS
   $(window).scroll(function() {
-    requestAnimationFrame(seaLevelChange);
+    requestAnimationFrame(animate);
   });
 
   seaLevelChange();
+  introFade();
 })

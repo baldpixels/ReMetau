@@ -6,8 +6,7 @@
 
 @font-face {
   font-family: "Mission Gothic";
-  src: url('style/fonts/MissionGothic-Black.eot'); /* IE9 Compat Modes */
-  src: url('style/fonts/MissionGothic-Black.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+  src: url('style/fonts/MissionGothic-Black.eot') format('embedded-opentype'), /* IE6-IE8 */
        url('style/fonts/MissionGothic-Black.woff2') format('woff2'), /* Super Modern Browsers */
        url('style/fonts/MissionGothic-Black.woff') format('woff'), /* Pretty Modern Browsers */
        url('style/fonts/MissionGothic-Black.ttf')  format('truetype'), /* Safari, Android, iOS */
@@ -16,8 +15,7 @@
 
 @font-face {
   font-family: "Andale Mono";
-  src: url('style/fonts/AndaleMono.eot'); /* IE9 Compat Modes */
-  src: url('style/fonts/AndaleMono.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+  src: url('style/fonts/AndaleMono.eot') format('embedded-opentype'), /* IE9 Compat Modes */
        url('style/fonts/AndaleMono.woff2') format('woff2'), /* Super Modern Browsers */
        url('style/fonts/AndaleMono.woff') format('woff'), /* Pretty Modern Browsers */
        url('style/fonts/AndaleMono.ttf')  format('truetype'), /* Safari, Android, iOS */
@@ -67,6 +65,13 @@ section {
   margin: 0;
 }
 
+.spacer {
+  width: 100vw;
+  height: 50vh;
+  margin: 0;
+  padding: 0;
+}
+
 .row-only {
   flex-flow: column;
 }
@@ -99,6 +104,11 @@ img, video {
   box-sizing: border-box;
 }
 
+video:hover {
+  box-shadow: 0 12px 0 #f4f4f4;
+  filter: drop-shadow(0 -12px 0 #f4f4f4);
+}
+
 .media {
 
 }
@@ -129,7 +139,7 @@ h1 {
 h2 {
   z-index: -1;
   position: fixed;
-  bottom: 45px;
+  bottom: 60px;
   padding-top: 12px;
   color: #f4f4f4;
   font-family: "Andale Mono", monospace;
@@ -137,6 +147,18 @@ h2 {
   font-size: 15px;
   text-align: center;
   border-top: 3px solid #f4f4f4;
+}
+
+#arrow-down {
+  width: 30px;
+  height: 30px;
+  position: fixed;
+  left: 50%;
+  transform: translate(-50%, 0);
+  bottom: 30px;
+  object-fit: contain;
+  object-position: center;
+  visibility: hidden;
 }
 
 .text-big {
