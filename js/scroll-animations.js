@@ -5,7 +5,8 @@ $( document ).ready( function() {
 
   var arrow = $("#arrow-down");
 
-  var scrollPercent = 0;
+  var precision = 10000;
+  var scrollPercent = Math.round( precision * $(window).scrollTop() / ($(document).height() - $(window).height() - overshoot) ) / precision;
   var initialHeight = 60;
   var overshoot = 10;
 
@@ -13,11 +14,10 @@ $( document ).ready( function() {
 
 // FUNCTIONS
   function seaLevelChange() {
-    let precision = 10000;
     scrollPercent = Math.round( precision * $(window).scrollTop() / ($(document).height() - $(window).height() - overshoot) ) / precision;
 
     if(scrollPercent > 0) {
-      $('#arrow-down').fadeTo('medium', 0);
+      arrow.fadeTo('medium', 0);
     }
 
     var riseHeight = initialHeight + scrollPercent * $(window).height();
@@ -29,24 +29,23 @@ $( document ).ready( function() {
     arrow.hide();
     arrow.css("visibility", "visible");
 
-    var fadeInTime = 1200;
+      var fadeInTime = 1200;
 
-    arrow.fadeIn({ duration: fadeInTime / 3, queue: false });
+      arrow.fadeIn({ duration: fadeInTime / 3, queue: false });
 
-    arrow.animate({
-      bottom: '-=15px'
-    }, { duration: fadeInTime / 2, queue: false });
-  }
+      arrow.animate({
+        bottom: '-=15px'
+      }, { duration: fadeInTime / 2, queue: false });
 
-  function animate() {
-    seaLevelChange();
+      ocean.animate({
+        height: '+=' + initialHeight
+      }, { duration: fadeInTime, queue: false });
   }
 
 // EVENT LISTENERS
   $(window).scroll(function() {
-    requestAnimationFrame(animate);
+    requestAnimationFrame(seaLevelChange);
   });
 
-  seaLevelChange();
   introFade();
 })

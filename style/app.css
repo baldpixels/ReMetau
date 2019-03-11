@@ -5,21 +5,12 @@
 */
 
 @font-face {
-  font-family: "Mission Gothic";
-  src: url('style/fonts/MissionGothic-Black.eot') format('embedded-opentype'), /* IE6-IE8 */
-       url('style/fonts/MissionGothic-Black.woff2') format('woff2'), /* Super Modern Browsers */
-       url('style/fonts/MissionGothic-Black.woff') format('woff'), /* Pretty Modern Browsers */
-       url('style/fonts/MissionGothic-Black.ttf')  format('truetype'), /* Safari, Android, iOS */
-       url('style/fonts/MissionGothic-Black.svg#svgFontName') format('svg'); /* Legacy iOS */
-}
-
-@font-face {
   font-family: "Andale Mono";
-  src: url('style/fonts/AndaleMono.eot') format('embedded-opentype'), /* IE9 Compat Modes */
-       url('style/fonts/AndaleMono.woff2') format('woff2'), /* Super Modern Browsers */
-       url('style/fonts/AndaleMono.woff') format('woff'), /* Pretty Modern Browsers */
-       url('style/fonts/AndaleMono.ttf')  format('truetype'), /* Safari, Android, iOS */
-       url('style/fonts/AndaleMono.svg#svgFontName') format('svg'); /* Legacy iOS */
+  src: url('fonts/AndaleMono.eot') format('embedded-opentype'), /* IE9 Compat Modes */
+       url('fonts/AndaleMono.woff2') format('woff2'), /* Super Modern Browsers */
+       url('fonts/AndaleMono.woff') format('woff'), /* Pretty Modern Browsers */
+       url('fonts/AndaleMono.ttf')  format('truetype'), /* Safari, Android, iOS */
+       url('fonts/AndaleMono.svg#svgFontName') format('svg'); /* Legacy iOS */
 }
 
 html {
@@ -82,8 +73,7 @@ section {
   align-items: center;
   justify-content: space-around;
   margin: 0;
-  padding: 0;
-  margin-bottom: 90px;
+  padding: 300px;
 }
 
 .icon {
@@ -101,6 +91,7 @@ section {
 }
 
 img, video {
+  z-index: -6;
   box-sizing: border-box;
 }
 
@@ -116,7 +107,9 @@ video:hover {
 .mediaCaption {
   box-sizing: border-box;
   background-color: #000;
-  font-family: "Mission Gothic", sans-serif;
+  font-family: freight-sans-pro, sans-serif;
+  font-weight: 300;
+  font-style: normal;
   padding: 6px;
 }
 
@@ -129,8 +122,9 @@ video:hover {
 h1 {
   z-index: -1;
   position: fixed;
-  font-family: "Mission Gothic", sans-serif;
-  color: #f4f4f4;
+  font-family: freight-sans-pro, sans-serif;
+  font-weight: 300;
+  font-style: normal;  color: #f4f4f4;
   filter: drop-shadow(3px 3px 0px #0000ff);
   text-align: center;
   text-transform: uppercase;
@@ -184,12 +178,14 @@ p {
   padding: 3px 0 3px 0;
 }
 
-.text-center {
-  flex: 0 100%;
-  height: auto;
-  margin: auto;
+text-center {
+  width: 100%;
   text-align: center;
-  padding: 3px 0 3px 0;
+}
+
+.width-full {
+  width: 100vw;
+  text-align: center;
 }
 
 .caption-left {
