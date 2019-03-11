@@ -145,16 +145,15 @@ h2 {
 }
 
 #arrow-down {
-  z-index: +1;
+  z-index: 0;
   width: 30px;
   height: 30px;
   position: fixed;
   left: 50%;
   transform: translate(-50%, 0);
-  bottom: 30px;
+  bottom: 15px;
   object-fit: contain;
   object-position: center;
-  visibility: hidden;
 }
 
 .text-big {
