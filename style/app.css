@@ -115,9 +115,8 @@ section {
 .mediaCaption {
   box-sizing: border-box;
   background-color: #000;
-  font-family: 'Roboto', sans-serif;
+  font-family: "Franklin Gothic Medium", "Franklin Gothic", "ITC Franklin Gothic", Helvetica, sans-serif;
   font-weight: 700;
-  font-style: normal;
   padding: 6px;
 }
 
