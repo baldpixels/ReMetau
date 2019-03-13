@@ -28,7 +28,7 @@ body {
 }
 
 #ocean {
-  z-index: 0;
+  z-index: -1;
   position: fixed;
   bottom: 0;
   width: 100vw;
@@ -60,8 +60,8 @@ h2 {
 
 section {
   width: 100vw;
-  height: 100vh;
-  min-height: 480px;
+  height: auto;
+  min-height: 100vh;
   position: relative;
   display: flex;
   align-items: center;
@@ -91,11 +91,12 @@ section {
 
 .icon {
   flex: 1 50%;
+  padding-bottom: 12px;
   box-sizing: border-box;
 }
 
 .icon:hover {
-  filter: invert(1);
+  box-shadow: 0 12px 0 #f4f4f4;
 }
 
 .mediaWrapper {
