@@ -18,7 +18,7 @@ $( document ).ready( function() {
 
   function seaLevelChange() {
     scrollPercent = calcScrollPercent();
-    console.log(scrollPercent);
+
     if(titleOn) {
       if(scrollPercent >= (100 / precision)) {
         title.stop();
