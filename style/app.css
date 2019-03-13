@@ -87,7 +87,7 @@ section {
   align-items: center;
   justify-content: space-around;
   margin: 0;
-  padding: 33vh;
+  padding: 33vh 0 15vh 0;
 }
 
 .icon {
@@ -146,7 +146,7 @@ p {
   padding: 3px 0 3px 0;
 }
 
-text-center {
+.text-center {
   width: 100%;
   text-align: center;
 }
