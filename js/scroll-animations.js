@@ -2,6 +2,7 @@ $( document ).ready( function() {
 
   var ocean = $("#ocean");
   var title = $("h1");
+  var titleOn = false;
   var fadeInTime = 600;
 
 // Scroll Animation Variables
@@ -17,6 +18,20 @@ $( document ).ready( function() {
 
   function seaLevelChange() {
     scrollPercent = calcScrollPercent();
+    console.log(scrollPercent);
+    if(titleOn) {
+      if(scrollPercent >= (100 / precision)) {
+        title.stop();
+        title.fadeOut(fadeInTime / 2);
+        titleOn = false;
+      }
+    } else {
+      if(scrollPercent < (100 / precision)) {
+        title.stop();
+        title.fadeIn(fadeInTime);
+        titleOn = true;
+      }
+    }
 
     let riseHeight = initialHeight + scrollPercent * $(window).height();
     ocean.css('height', riseHeight);
@@ -28,6 +43,8 @@ $( document ).ready( function() {
         height: '+=' + initialHeight
       }, { duration: fadeInTime * 1.5, queue: false });
     });
+
+    titleOn = true;
   }
 
 // EVENT LISTENERS
