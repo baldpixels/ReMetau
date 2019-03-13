@@ -102,7 +102,8 @@ section {
 .mediaWrapper {
   flex: 1 50%;
   width: 100%;
-  height: auto;
+  height: 100%;
+  text-align: center;
 }
 
 .media {
@@ -230,6 +231,7 @@ a:hover {
     object-position: center;
   }
 
+/* SMALL */
   section {
     flex-direction: column;
   }
@@ -249,6 +251,7 @@ a:hover {
   .media {
     width: 100%;
     height: auto;
+    max-width: 600px;
     order: 0;
   }
 
@@ -324,8 +327,10 @@ a:hover {
     object-position: center;
   }
 
+/* LARGE */
   section {
     min-height: 480px;
+    max-height: 100vh;
     flex-flow: row nowrap;
   }
 
