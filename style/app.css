@@ -136,14 +136,14 @@ p {
   flex: 0 50%;
   height: auto;
   text-align: left;
-  padding: 3px 0 3px 0;
+  padding: 0;
 }
 
 .text-right {
   flex: 0 50%;
   height: auto;
   text-align: right;
-  padding: 3px 0 3px 0;
+  padding: 0;
 }
 
 .text-center {
@@ -170,7 +170,7 @@ p {
 
 .highlighted {
   background-color: #2500C7;
-  padding: 3px 0 3px 0;
+  padding: .2em 0 .2em 0;
 }
 
 .underlined {
@@ -307,7 +307,7 @@ a:hover {
     object-position: center;
   }
 
-/* LARGE */
+  /* LARGE */
   section {
     max-height: 100vh;
     flex-flow: row nowrap;
@@ -350,10 +350,11 @@ a:hover {
 
   }
 
+  /* LARGE */
   p {
     font-size: 18px;
     letter-spacing: .09em;
-    line-height: 1.75em;
+    line-height: 2em;
   }
 
   .text-left {
