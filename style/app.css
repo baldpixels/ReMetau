@@ -134,7 +134,7 @@ p {
 
 .text-left {
   flex: 0 50%;
-  max-width: 420px;
+  max-width: 480px;
   height: auto;
   text-align: left;
   padding: 0;
@@ -142,7 +142,7 @@ p {
 
 .text-right {
   flex: 0 50%;
-  max-width: 420px;
+  max-width: 480px;
   height: auto;
   text-align: right;
   padding: 0;
