@@ -48,7 +48,7 @@ $( document ).ready( function() {
   }
 
 // EVENT LISTENERS
-  $('body').scroll(function() {
+  $('body').on('touchstart touchend touchmove mousewheel touchcancel gesturestart gestureend gesturechange orientationchange', function(){
     ocean.stop();
     requestAnimationFrame(seaLevelChange);
   });
