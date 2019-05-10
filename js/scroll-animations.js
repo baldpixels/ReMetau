@@ -49,9 +49,9 @@ $( document ).ready( function() {
 
 // EVENT LISTENERS
   $('body').scroll(function() {
-    ocean.stop();
-    requestAnimationFrame(seaLevelChange);
+    title.removeClass('fade-in');
+    title.addClass('fade-out');
   });
 
-  introAnimation();
+  title.addClass('fade-in');
 })
