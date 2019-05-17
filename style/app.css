@@ -46,6 +46,12 @@ body {
   left: 0;
 }
 
+#intro-video {
+  width: 100%;
+  height: auto;
+  text-align: center;
+}
+
 h1 {
   z-index: -1;
   position: fixed;
